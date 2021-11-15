@@ -45,19 +45,23 @@ function Dashboard(props) {
             <Toolbar />
             <Divider />
             
-
-            
-             <Box>
-             <Link to="/home" ><Button>Home</Button></Link>
+            <Link to="/home" ><Button>Home</Button></Link>
              <Divider />
-                <Link to={`${url}/makeAdmin`}><Button color="inherit">Make Admin</Button></Link>
-                <Link to={`${url}/addService`}><Button color="inherit">Add Service</Button></Link>
-                <Link to={`${url}/review`}><Button color="inherit">Provide Review</Button></Link>
-                <Link to={`${url}/myOrder`}><Button color="inherit">My Order</Button></Link>
-                <Link to={`${url}/manageAllOrder`}><Button color="inherit">Manage All Order</Button></Link>
+             <Link to={`${url}/myOrder`}><Button color="inherit">My Order</Button></Link>
+             <Link to={`${url}/review`}><Button color="inherit">Provide Review</Button></Link>
+            
+             {
+                 admin && <Box>
+             
+                 <Link to={`${url}/makeAdmin`}><Button color="inherit">Make Admin</Button></Link>
+                 <Link to={`${url}/addService`}><Button color="inherit">Add Service</Button></Link>
+                 
+                 
+                 <Link to={`${url}/manageAllOrder`}><Button color="inherit">Manage All Order</Button></Link>
+                 
                 
-               
-            </Box>
+             </Box>
+             }
             
         </div>
     );
