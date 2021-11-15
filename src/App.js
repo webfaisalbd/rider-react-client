@@ -20,6 +20,8 @@ import Navigation from "./Pages/Home/Shared/Navigation/Navigation";
 import Login from "./Pages/Login/Login/Login";
 import PrivateRoute from "./Pages/Login/PrivateRoute/PrivateRoute";
 import Register from "./Pages/Login/Register/Register";
+import ManageAllOrder from "./Pages/ManageAllOrder/ManageAllOrder";
+import MyOrder from "./Pages/MyOrder/MyOrder";
 
 function App() {
   return (
@@ -52,6 +54,12 @@ function App() {
             </Route>
             <Route path="/dashboard">
               <Dashboard />
+            </Route>
+            <Route path="/myOrder">
+              <MyOrder />
+            </Route>
+            <Route path="/manageAllOrder">
+              <ManageAllOrder />
             </Route>
             <Route path="/review">
               <Review />

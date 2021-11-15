@@ -5,16 +5,7 @@ import { Button, Card, CardActions, CardContent, CardMedia,Box, Typography } fro
 const AllService = ({ service }) => {
     // const {service} = props;
     const { _id, name, price, description, img } = service;
-    const styles = theme => ({
-      Card: {
-        width: 300,
-        margin: 'auto'
-      },
-      Media: {
-        height: '100%',
-        width: '100%'
-      }
-    });
+    
     return (
       <Card sx={{  boxShadow: 2 }}>
       <img style={{height:"250px"}} src={img} />

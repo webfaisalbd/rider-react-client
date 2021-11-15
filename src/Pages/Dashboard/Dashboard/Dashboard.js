@@ -24,6 +24,10 @@ import {
 import { Button } from '@mui/material';
 import MakeAdmin from '../MakeAdmin/MakeAdmin';
 import useAuth from './../../../hooks/useAuth';
+import AddService from '../../AddService/AddService';
+import Review from '../Review/Review';
+import MyOrder from '../../MyOrder/MyOrder';
+import ManageAllOrder from '../../ManageAllOrder/ManageAllOrder';
 
 const drawerWidth = 200;
 
@@ -40,24 +44,21 @@ function Dashboard(props) {
         <div>
             <Toolbar />
             <Divider />
-            <Link to="/appointment"><Button color="inherit">Appointment</Button></Link>
+            
 
-            <Link to={`${url}`}><Button color="inherit">Dashboard</Button></Link>
+            
              <Box>
+             <Link to="/home" ><Button>Home</Button></Link>
+             <Divider />
                 <Link to={`${url}/makeAdmin`}><Button color="inherit">Make Admin</Button></Link>
-                <Link to="/addService"><Button color="inherit">Add Service</Button></Link>
-                <Link to="/review"><Button color="inherit">Provide Review</Button></Link>
+                <Link to={`${url}/addService`}><Button color="inherit">Add Service</Button></Link>
+                <Link to={`${url}/review`}><Button color="inherit">Provide Review</Button></Link>
+                <Link to={`${url}/myOrder`}><Button color="inherit">My Order</Button></Link>
+                <Link to={`${url}/manageAllOrder`}><Button color="inherit">Manage All Order</Button></Link>
+                
+               
             </Box>
-            <List>
-                {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-                    <ListItem button key={text}>
-                        <ListItemIcon>
-                            {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                        </ListItemIcon>
-                        <ListItemText primary={text} />
-                    </ListItem>
-                ))}
-            </List>
+            
         </div>
     );
 
@@ -129,6 +130,19 @@ function Dashboard(props) {
 
                     <Route path={`${path}/makeAdmin`}>
                         <MakeAdmin></MakeAdmin>
+                    </Route>
+                    <Route path={`${path}/addService`}>
+                        <AddService></AddService>
+                    </Route>
+                    <Route path={`${path}/review`}>
+                        <Review></Review>
+                    </Route>
+                    
+                    <Route path={`${path}/myOrder`}>
+                        <MyOrder></MyOrder>
+                    </Route>
+                    <Route path={`${path}/manageAllOrder`}>
+                        <ManageAllOrder></ManageAllOrder>
                     </Route>
 
                 </Switch>
