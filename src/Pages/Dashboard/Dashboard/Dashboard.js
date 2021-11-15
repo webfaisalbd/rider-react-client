@@ -6,12 +6,6 @@ import CssBaseline from '@mui/material/CssBaseline';
 import Divider from '@mui/material/Divider';
 import Drawer from '@mui/material/Drawer';
 import IconButton from '@mui/material/IconButton';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
-import MailIcon from '@mui/icons-material/Mail';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
@@ -35,7 +29,7 @@ function Dashboard(props) {
     const { window } = props;
     const [mobileOpen, setMobileOpen] = React.useState(false);
     let { path, url } = useRouteMatch();
-    const { admin } = useAuth();
+    const { admin , logOut } = useAuth();
     const handleDrawerToggle = () => {
         setMobileOpen(!mobileOpen);
     };
@@ -45,19 +39,32 @@ function Dashboard(props) {
             <Toolbar />
             <Divider />
             
-            <Link to="/home" ><Button>Home</Button></Link>
-             <Divider />
-             <Link to={`${url}/myOrder`}><Button color="inherit">My Order</Button></Link>
-             <Link to={`${url}/review`}><Button color="inherit">Provide Review</Button></Link>
             
+             
+              {
+                  !admin && <Box>
+                <Link to="/home" ><Button>Home</Button></Link>
+                         <Divider />
+                         <Link to={`${url}/review`}><Button color="inherit">Provide Review</Button></Link>
+                         <Link to={`${url}/myOrder`}><Button color="inherit">My Order</Button></Link>
+                         <Divider />
+                         <Button onClick={logOut} color="inherit">LogOut</Button>
+                </Box>
+              }
+            
+
+
+
+
              {
                  admin && <Box>
-             
+                <Link to="/home" ><Button>Home</Button></Link>
+                <Divider />
                  <Link to={`${url}/makeAdmin`}><Button color="inherit">Make Admin</Button></Link>
-                 <Link to={`${url}/addService`}><Button color="inherit">Add Service</Button></Link>
-                 
-                 
+                 <Link to={`${url}/addService`}><Button color="inherit">Add a Product</Button></Link>
                  <Link to={`${url}/manageAllOrder`}><Button color="inherit">Manage All Order</Button></Link>
+                 <Divider />
+                <Button onClick={logOut} color="inherit">LogOut</Button>
                  
                 
              </Box>

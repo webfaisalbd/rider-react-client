@@ -16,7 +16,7 @@ const MyOrder = () => {
                 const value= data.filter(db=>db.email===user.email);
                 setUsers(value);
             });       
-    }, [])
+    }, [users])
 
 
     const handleDelete= id => {
@@ -73,9 +73,12 @@ const MyOrder = () => {
         </Typography>
         <Typography variant="body2" color="text.secondary">
           Order Date: {user.date}
-        </Typography>
-        <Button  >{user.status}</Button>
+        </Typography> 
+        
+       <div sx={{ justifyContent: 'space-between' }}>
+       <Button  >{user.status}</Button>
         <Button variant="contained"  onClick={()=> handleDelete(user._id)}>Delete</Button>
+       </div>
         
       </CardContent>
       

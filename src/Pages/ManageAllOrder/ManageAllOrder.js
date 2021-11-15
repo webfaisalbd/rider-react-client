@@ -49,7 +49,7 @@ const ManageAllOrder = () => {
     const newOrder = { ...order };
     console.log(order)
 
-    newOrder.status = "Approved";
+    newOrder.status = "Shipped";
     delete newOrder._id;
     const url = `http://localhost:5000/buyer/${order._id}`;
     fetch(url, {
