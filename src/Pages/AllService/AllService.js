@@ -22,7 +22,7 @@ const AllService = ({ service }) => {
         </Typography>
       </CardContent>
       <CardActions>
-      <Link to={`/booking/${_id}`}>
+      <Link to={`/booking/${_id}`}  style={{textDecoration:"none"}}>
              <Button size="small">Buy Now</Button>
         </Link>
       </CardActions>

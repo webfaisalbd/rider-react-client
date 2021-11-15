@@ -12,7 +12,7 @@ const Home = () => {
             <Services></Services>
             <ShowReviews></ShowReviews>
             <Form></Form>
-            <Footer></Footer>
+            
 
 
         </div>

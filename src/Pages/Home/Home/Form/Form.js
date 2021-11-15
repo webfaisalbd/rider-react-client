@@ -1,12 +1,22 @@
+import { Grid , Box} from '@mui/material';
 import React from 'react';
 import './Form.css'
 
 
 const Form = () => {
     return (
+      <Box sx={{ flexGrow: 1 }}>
+      <Grid container spacing={3}>
+        <Grid item xs>
+          ok
+        </Grid>
+        <Grid item xs={6}>
+          
+
         <div class="container">
             <h2>Online Order</h2>
             <h4>You Can order in online for covid situation</h4>
+            
   <form action="/action_page.php">
     <div class="row">
       <div class="col-25">
@@ -54,6 +64,14 @@ const Form = () => {
     </div>
   </form>
 </div>
+
+        </Grid>
+        <Grid item xs>
+          ok
+        </Grid>
+      </Grid>
+    </Box>
+        
     );
 };
 
