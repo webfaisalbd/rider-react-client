@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import AllService from '../AllService/AllService';
-// import './AllServices.css';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import { Container, Typography } from '@mui/material';

@@ -5,14 +5,19 @@ import { Button, Card, CardActions, CardContent, CardMedia,Box, Typography } fro
 const AllService = ({ service }) => {
     // const {service} = props;
     const { _id, name, price, description, img } = service;
+    const styles = theme => ({
+      Card: {
+        width: 300,
+        margin: 'auto'
+      },
+      Media: {
+        height: '100%',
+        width: '100%'
+      }
+    });
     return (
-        <Card sx={{ maxWidth: 345, boxShadow: 2 }}>
-      <CardMedia
-        component="img"
-        alt="green iguana"
-        height="250"
-        image={img}
-      />
+      <Card sx={{  boxShadow: 2 }}>
+      <img style={{height:"250px"}} src={img} />
       <Box  sx={{ bgcolor: 'text.disabled',color: 'primary.main' }}>
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
@@ -29,8 +34,6 @@ const AllService = ({ service }) => {
       <Link to={`/booking/${_id}`}>
              <Button size="small">Buy Now</Button>
         </Link>
-        
-        
       </CardActions>
       </Box>
     </Card>
