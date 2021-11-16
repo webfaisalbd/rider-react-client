@@ -27,6 +27,7 @@ import ManageAllOrder from "./Pages/ManageAllOrder/ManageAllOrder";
 import MyOrder from "./Pages/MyOrder/MyOrder";
 import NotFound from "./Pages/NotFound/NotFound";
 import { render } from "react-dom";
+import AdminRoute from "./Pages/Login/AdminRoute/AdminRoute";
 
 function App() {
   return (
@@ -60,24 +61,24 @@ function App() {
             <Route path="/Services">
               <Services />
             </Route>
-            <PrivateRoute path="/AddService">
+            <AdminRoute path="/AddService">
               <AddService />
-            </PrivateRoute>
+            </AdminRoute>
             <PrivateRoute path="/dashboard">
               <Dashboard />
             </PrivateRoute>
             <PrivateRoute path="/myOrder">
               <MyOrder />
             </PrivateRoute>
-            <PrivateRoute path="/manageAllOrder">
+            <AdminRoute path="/manageAllOrder">
               <ManageAllOrder />
-            </PrivateRoute>
+            </AdminRoute>
             <PrivateRoute path="/review">
               <Review />
             </PrivateRoute>
-            <PrivateRoute path="/makeAdmin">
+            <AdminRoute path="/makeAdmin">
               <MakeAdmin />
-            </PrivateRoute>
+            </AdminRoute>
             <Route path="/pay">
               <Pay />
             </Route>
