@@ -78,9 +78,9 @@ function App() {
             <PrivateRoute path="/makeAdmin">
               <MakeAdmin />
             </PrivateRoute>
-            <PrivateRoute path="/pay">
+            <Route path="/pay">
               <Pay />
-            </PrivateRoute>
+            </Route>
             <Route path="*">
               <NotFound />
             </Route>
