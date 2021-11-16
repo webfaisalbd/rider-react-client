@@ -8,7 +8,7 @@ const Form = () => {
       <Box sx={{ flexGrow: 1 }}>
       <Grid container spacing={3}>
         <Grid item xs>
-          ok
+          
         </Grid>
         <Grid item xs={6}>
           
@@ -67,7 +67,7 @@ const Form = () => {
 
         </Grid>
         <Grid item xs>
-          ok
+          
         </Grid>
       </Grid>
     </Box>

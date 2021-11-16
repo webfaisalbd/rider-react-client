@@ -78,8 +78,8 @@ function App() {
             
 
           </Switch>
-    <Footer></Footer>
-
+    
+<Footer></Footer>
 
 
         </Router>

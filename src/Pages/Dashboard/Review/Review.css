@@ -4,7 +4,15 @@
     justify-content: center;
     align-items: center;
 }
-.add-review form input, textarea{
+.add-review form input{
+    width: 40%;
+    margin-bottom: 10px;
+}
+.add-review form  textarea{
+    width: 40%;
+    margin-bottom: 10px;
+}
+.add-review form  select{
     width: 40%;
     margin-bottom: 10px;
 }

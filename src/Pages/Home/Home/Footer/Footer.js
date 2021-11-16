@@ -3,7 +3,7 @@ import "./Footer.css"
 
 const Footer = () => {
     return (
-        <div>
+        <div style={{mb:3}}>
             <section class="contact-area" id="contact">
         <div class="container">
             <div class="row">
