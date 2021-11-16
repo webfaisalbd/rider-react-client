@@ -32,7 +32,7 @@ const ShowReview = ({ service }) => {
       <CardMedia
         component="img"
         sx={{ width: 151 }}
-        image="https://thumbs.dreamstime.com/z/person-leaves-good-online-review-product-service-vector-illustration-design-graphics-site-section-reviews-us-190352662.jpg"
+        image="https://i.ibb.co/P5gzypq/review.png"
       />
     </Card>
     );

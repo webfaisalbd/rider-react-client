@@ -6,7 +6,7 @@ const Pay = () => {
 <Container>
 <div>
      <h2>All Payments gateway is comming soon</h2>
-            <img style={{ width: "100%",   height: "400px"}} src="https://sgp1.digitaloceanspaces.com/cosmosgroup-dc/news/7iqcYzq5l0Hy9UR2Cb328IDTmXyg0KGZlRHwhgQI.jpeg" />
+            <img style={{ width: "100%",   height: "400px"}} src="https://i.ibb.co/jL4Lxm7/payment.png" />
         </div>
 </Container>
     );
