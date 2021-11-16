@@ -85,7 +85,7 @@ const Login = () => {
                     }
                 </Grid>
                 <Grid item xs={12} md={6}>
-                    <img src={login} style={{ width: '100%' }} />
+                    <img src="https://thumbs.dreamstime.com/b/vector-illustration-isolated-white-background-login-button-icon-127000119.jpg" style={{ height:'300px',width: '100%', marginTop: "50px" }} />
                 </Grid>
 
             </Grid>

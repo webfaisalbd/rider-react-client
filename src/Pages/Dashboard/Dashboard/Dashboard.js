@@ -36,6 +36,7 @@ function Dashboard(props) {
 
     const drawer = (
         <div>
+            
             <Toolbar />
             <Divider />
             
@@ -69,6 +70,7 @@ function Dashboard(props) {
                 
              </Box>
              }
+             
             
         </div>
     );
@@ -99,6 +101,7 @@ function Dashboard(props) {
                         Dashboard
                     </Typography>
                 </Toolbar>
+                
             </AppBar>
             <Box
                 component="nav"
@@ -120,6 +123,7 @@ function Dashboard(props) {
                 >
                     {drawer}
                 </Drawer>
+                
                 <Drawer
                     variant="permanent"
                     sx={{
