@@ -7,7 +7,7 @@ import ShowReviews from './ShowReviews/ShowReviews';
 const Home = () => {
     return (
         <div>
-            <Banner></Banner>
+            
             <Services></Services>
             <ShowReviews></ShowReviews>
             <Form></Form>

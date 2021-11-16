@@ -4,7 +4,11 @@
     justify-content: center;
     align-items: center;
 }
-.add-booking form input, textarea{
+.add-booking form input{
+    width: 60%;
+    margin-bottom: 10px;
+}
+.add-booking form  textarea{
     width: 60%;
     margin-bottom: 10px;
 }

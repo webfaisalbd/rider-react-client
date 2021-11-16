@@ -13,9 +13,11 @@ import AllServices from "./Pages/AllServices/AllServices";
 import Booking from "./Pages/Booking/Booking";
 import Dashboard from "./Pages/Dashboard/Dashboard/Dashboard";
 import MakeAdmin from "./Pages/Dashboard/MakeAdmin/MakeAdmin";
+import Pay from "./Pages/Dashboard/Pay/Pay";
 import Review from "./Pages/Dashboard/Review/Review";
 import Footer from "./Pages/Home/Home/Footer/Footer";
 import Home from "./Pages/Home/Home/Home";
+import Sliding from "./Pages/Home/Home/Sliding/Sliding";
 import Services from "./Pages/Home/Services/Services";
 import Navigation from "./Pages/Home/Shared/Navigation/Navigation";
 import Login from "./Pages/Login/Login/Login";
@@ -24,6 +26,7 @@ import Register from "./Pages/Login/Register/Register";
 import ManageAllOrder from "./Pages/ManageAllOrder/ManageAllOrder";
 import MyOrder from "./Pages/MyOrder/MyOrder";
 import NotFound from "./Pages/NotFound/NotFound";
+import { render } from "react-dom";
 
 function App() {
   return (
@@ -39,6 +42,9 @@ function App() {
             <Route path="/home">
               <Home />
             </Route>
+            <Route path="/sliding">
+              <Sliding />
+            </Route>
             <Route path="/Login">
               <Login />
             </Route>
@@ -48,21 +54,21 @@ function App() {
             <PrivateRoute path="/booking/:serviceId">
               <Booking />
             </PrivateRoute>
-            <PrivateRoute path="/AllServices">
+            <Route path="/AllServices">
               <AllServices></AllServices>
-            </PrivateRoute>
-            <PrivateRoute path="/Services">
+            </Route>
+            <Route path="/Services">
               <Services />
-            </PrivateRoute>
+            </Route>
             <PrivateRoute path="/AddService">
               <AddService />
             </PrivateRoute>
             <PrivateRoute path="/dashboard">
               <Dashboard />
             </PrivateRoute>
-            <Route path="/myOrder">
+            <PrivateRoute path="/myOrder">
               <MyOrder />
-            </Route>
+            </PrivateRoute>
             <PrivateRoute path="/manageAllOrder">
               <ManageAllOrder />
             </PrivateRoute>
@@ -71,6 +77,9 @@ function App() {
             </PrivateRoute>
             <PrivateRoute path="/makeAdmin">
               <MakeAdmin />
+            </PrivateRoute>
+            <PrivateRoute path="/pay">
+              <Pay />
             </PrivateRoute>
             <Route path="*">
               <NotFound />
@@ -87,5 +96,5 @@ function App() {
     </div>
   );
 }
-
+render(<App />, document.getElementById("root"));
 export default App;

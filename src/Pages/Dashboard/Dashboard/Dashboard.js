@@ -49,6 +49,8 @@ function Dashboard(props) {
                          <Link to={`${url}/review`}><Button color="inherit">Provide Review</Button></Link>
                          <Link to={`${url}/myOrder`}><Button color="inherit">My Order</Button></Link>
                          <Divider />
+                         <Link to={`${url}/pay`}><Button color="inherit">Payment</Button></Link>
+                         <Divider />
                          <Button onClick={logOut} color="inherit">LogOut</Button>
                 </Box>
               }
