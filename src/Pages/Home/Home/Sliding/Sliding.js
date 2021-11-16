@@ -1,46 +1,47 @@
+import React from 'react';
+import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
-import React, { Component } from "react";
-import Slider from "react-slick";
-export default class CenterMode extends Component {
-  render() {
-    const settings = {
-      className: "center",
-      centerMode: true,
-      dots: true,
-      infinite: true,
-      centerPadding: "60px",
-      slidesToShow: 2,
-      speed: 500,
-      responsive: [
-        {
-          breakpoint: 1024,
-          settings: {
-            slidesToShow: 2,
-            slidesToScroll: 3,
-            infinite: true,
-            dots: true
-          }
-        },
-        {
-          breakpoint: 600,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 2,
-            initialSlide: 2
-          }
-        },
-        {
-          breakpoint: 480,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1
-          }
+
+const Sliding = () => {
+  const settings = {
+    className: "center",
+    centerMode: true,
+    dots: true,
+    infinite: true,
+    centerPadding: "60px",
+    slidesToShow: 2,
+    speed: 500,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true
         }
-      ]
-    };
-    return (
-      <div>
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 2,
+          initialSlide: 2
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  };
+
+  return (
+    <div  style={{marginBottom:"50px"}}>
         
         <Slider {...settings}>
           <div>
@@ -66,6 +67,7 @@ export default class CenterMode extends Component {
           
         </Slider>
       </div>
-    );
-  }
-}
+  );
+};
+
+export default Sliding;

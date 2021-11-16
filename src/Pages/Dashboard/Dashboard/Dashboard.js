@@ -49,7 +49,7 @@ function Dashboard(props) {
                          <Link to={`${url}/review`}><Button color="inherit">Provide Review</Button></Link>
                          <Link to={`${url}/myOrder`}><Button color="inherit">My Order</Button></Link>
                          <Divider />
-                         <Link to="/pay" ><Button>Payment</Button></Link>
+                         <Link to="/pay" ><Button>Payment Gateway</Button></Link>
                          <Divider />
                          <Button onClick={logOut} color="inherit">LogOut</Button>
                 </Box>
