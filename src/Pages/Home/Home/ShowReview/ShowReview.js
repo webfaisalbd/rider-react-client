@@ -1,7 +1,8 @@
 import React from 'react';
-
+import './ShowReview.css'
 import { Link } from 'react-router-dom';
 import { Button, Card, CardActions, CardContent, CardMedia,Box, Typography } from '@mui/material';
+import Rating from 'react-rating';
 
 const ShowReview = ({ service }) => {
     console.log(service);
@@ -17,9 +18,11 @@ const ShowReview = ({ service }) => {
           <Typography component="div" variant="h6">
             {email}
           </Typography>
-          <Typography component="div" variant="h6">
-            Rating: {rating} <i class="fas fa-star"></i>
-          </Typography>
+          <Rating
+          initialRating={rating}
+          emptySymbol="far fa-star icon-color"
+          fullSymbol="fas fa-star icon-color"
+          readonly></Rating>
           <Typography variant="subtitle1" color="text.secondary" component="div">
             {description}
           </Typography>
