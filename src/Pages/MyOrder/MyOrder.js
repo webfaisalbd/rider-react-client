@@ -10,7 +10,7 @@ const MyOrder = () => {
     // console.log(user.email);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/buyer`)
+        fetch(`https://intense-woodland-83356.herokuapp.com/buyer`)
             .then(res => res.json())
             .then(data => {
                 const value= data.filter(db=>db.email===user.email);
@@ -23,7 +23,7 @@ const MyOrder = () => {
 
         const proceed = window.confirm('Are you sure,You want to delete?')
         if (proceed) {
-            const url = `http://localhost:5000/buyer/${id}`;
+            const url = `https://intense-woodland-83356.herokuapp.com/buyer/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })

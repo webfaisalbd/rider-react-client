@@ -12,7 +12,7 @@ const Review = () => {
     const onSubmit = data => {
         console.log(data);
 
-        axios.post('http://localhost:5000/review', data)
+        axios.post('https://intense-woodland-83356.herokuapp.com/review', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('review successfully');
