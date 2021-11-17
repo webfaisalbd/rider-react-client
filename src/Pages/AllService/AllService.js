@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Button, Card, CardActions, CardContent, CardMedia,Box, Typography } from '@mui/material';
+import { Button, Card, CardActions, CardContent, CardMedia,Box, Typography, Tooltip } from '@mui/material';
+import './AllService.css'
 
 const AllService = ({ service }) => {
     // const {service} = props;
@@ -9,12 +10,13 @@ const AllService = ({ service }) => {
     return (
       <Card sx={{  boxShadow: 2 }}>
       <img style={{height:"250px"}} src={img} />
-      <Box  sx={{ bgcolor: 'text.disabled',color: 'primary.main' }}>
+      <Box sx={{ color: 'primary.main' }}>
+      <Typography className="ratingCard">
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
           {name}
         </Typography>
-        <Typography variant="h6" color="text.secondary"  sx={{ color: "white" , p:1 }}>
+        <Typography variant="h6" color="text.secondary" sx={{ color: "white" , p:1 }}>
           {price} BDT
         </Typography>
         <Typography variant="body2" color="text.secondary">
@@ -23,9 +25,14 @@ const AllService = ({ service }) => {
       </CardContent>
       <CardActions>
       <Link to={`/booking/${_id}`}  style={{textDecoration:"none"}}>
-             <Button size="small">Buy Now</Button>
+             <Tooltip  title="Click" placement="top">
+             <Button variant="contained"  size="small">Buy Now</Button>
+             </Tooltip>
         </Link>
+        
+        
       </CardActions>
+      </Typography>
       </Box>
     </Card>
     );

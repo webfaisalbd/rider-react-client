@@ -1,7 +1,7 @@
 import React from 'react';
 import './ShowReview.css'
 import { Link } from 'react-router-dom';
-import { Button, Card, CardActions, CardContent, CardMedia,Box, Typography } from '@mui/material';
+import { Button, Card, CardActions, CardContent, CardMedia,Box, Typography, CardActionArea } from '@mui/material';
 import Rating from 'react-rating';
 
 const ShowReview = ({ service }) => {
@@ -9,14 +9,20 @@ const ShowReview = ({ service }) => {
     // const {service} = props;
     const { _id, name, email, description, rating } = service;
     return (
-        <Card sx={{ display: 'flex', boxShadow: 2 }}>
-      <Box sx={{ display: 'flex', flexDirection: 'column' }}>
-        <CardContent sx={{ flex: '1 0 auto' }}>
-          <Typography component="div" variant="h5">
-            {name}
+      <Card  className="ratingCard"  sx={{ maxWidth: 345 }}>
+      <CardActionArea>
+        <CardMedia
+          component="img"
+          height="140"
+          image="https://i.ibb.co/P5gzypq/review.png"
+          alt="green iguana"
+        />
+        <CardContent>
+          <Typography gutterBottom variant="h5" component="div">
+          {name}
           </Typography>
-          <Typography component="div" variant="h6">
-            {email}
+          <Typography variant="body2" color="text.secondary">
+          {email}
           </Typography>
           <Rating
           initialRating={rating}
@@ -27,13 +33,7 @@ const ShowReview = ({ service }) => {
             {description}
           </Typography>
         </CardContent>
-        
-      </Box>
-      <CardMedia
-        component="img"
-        sx={{ width: 151 }}
-        image="https://i.ibb.co/P5gzypq/review.png"
-      />
+      </CardActionArea>
     </Card>
     );
 };

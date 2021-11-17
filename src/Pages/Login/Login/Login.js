@@ -1,4 +1,5 @@
 import { Alert, Button, CircularProgress, Container, Grid, TextField, Typography } from '@mui/material';
+import { Box } from '@mui/system';
 import React, { useState } from 'react';
 import { NavLink, useLocation, useHistory } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
@@ -37,8 +38,15 @@ const Login = () => {
         <Container>
             <Grid container spacing={2}>
 
+            <Grid item xs={12} md={3}>
+                    <div style={{marginTop:"200px"}}>
+                    <img style={{borderRadius:"25px"}}  src="https://thumbs.gfycat.com/AcclaimedZestyDuck-size_restricted.gif" />
+                    </div>
+                    </Grid>
+                    
                 <Grid sx={{ mt: 8 }} item xs={12} md={6}>
-                    <Typography variant="body1" gutterBottom>Login
+                    <Typography sx={{ boxShadow: 3, borderRadius: 4 }}>
+                    <Typography sx={{ pt: 2 }}  variant="h4" gutterBottom>Login
                     </Typography>
                     {!isLoading && <form onSubmit={handleLoginSubmit}>
                         <TextField
@@ -62,14 +70,10 @@ const Login = () => {
                             type="submit"
                             variant="contained">Login</Button>
 
-                        <NavLink style={{ textDecoration: "None" }} to="/Register">
-
-                            <Button sx={{ width: '75%', m: 1 }}
-                                type="submit"
-                                variant="text">New User ? Please Registration</Button>
-                        </NavLink>
+                        
 
                     </form>}
+                    </Typography>
                     <br />
                     <br />
                     
@@ -82,9 +86,17 @@ const Login = () => {
                         authError && <Alert severity="error">{authError}</Alert>
                     }
                 </Grid>
-                <Grid item xs={12} md={6}>
-                    <img src="https://i.ibb.co/Nx8xPZQ/login.png" style={{ height:'300px',width: '100%', marginTop: "50px" }} />
-                </Grid>
+                <Grid item xs={12} md={3}>
+                    <div style={{marginTop:"150px"}}>
+                    <img  src="https://c.tenor.com/pSkzLUayMVEAAAAj/ekruut-sign-up.gif" />
+                    <NavLink style={{ textDecoration: "None" }} to="/Register">
+
+                            <Button sx={{ width: '75%', m: 1 }}
+                                type="submit"
+                                variant="text">New User ? Please Registration</Button>
+                        </NavLink>
+                    </div>
+                    </Grid>
 
             </Grid>
         </Container >
