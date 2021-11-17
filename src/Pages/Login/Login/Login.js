@@ -40,7 +40,7 @@ const Login = () => {
 
             <Grid item xs={12} md={3}>
                     <div style={{marginTop:"200px"}}>
-                    <img style={{borderRadius:"25px"}}  src="https://thumbs.gfycat.com/AcclaimedZestyDuck-size_restricted.gif" />
+                    <img style={{borderRadius:"25px", width: "200px"}}  src="https://i.ibb.co/vZFbCBB/login1.gif" />
                     </div>
                     </Grid>
                     
@@ -87,8 +87,8 @@ const Login = () => {
                     }
                 </Grid>
                 <Grid item xs={12} md={3}>
-                    <div style={{marginTop:"150px"}}>
-                    <img  src="https://c.tenor.com/pSkzLUayMVEAAAAj/ekruut-sign-up.gif" />
+                    <div style={{marginTop:"130px"}}>
+                    <img  src="https://i.ibb.co/GpjQtPR/signUp.gif" />
                     <NavLink style={{ textDecoration: "None" }} to="/Register">
 
                             <Button sx={{ width: '75%', m: 1 }}

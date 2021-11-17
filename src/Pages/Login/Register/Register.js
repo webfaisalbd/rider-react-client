@@ -41,7 +41,7 @@ const Register = () => {
 
             <Grid item xs={12} md={3}>
                     <div style={{marginTop:"200px"}}>
-                    <img  src="https://c.tenor.com/pSkzLUayMVEAAAAj/ekruut-sign-up.gif" />
+                    <img  src="https://i.ibb.co/GpjQtPR/signUp.gif" />
                     </div>
                     </Grid>
 
@@ -107,8 +107,8 @@ const Register = () => {
 
 
                 <Grid item xs={12} md={3}>
-                <div style={{marginTop:"150px"}}>
-                <img  src="https://i.pinimg.com/originals/41/47/2d/41472d70ee63fd8f8ba1894ebc34bcc8.gif" />
+                <div style={{marginTop:"200px"}}>
+                <img width="50%"  src="https://i.ibb.co/Trfs0R9/login2.gif" />
                 <NavLink style={{ textDecoration: "None" }} to="/Login">
 
                    <Button sx={{ width: '75%', m: 1 }}

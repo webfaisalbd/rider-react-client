@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Box from '@mui/material/Box';
-import { Container, Typography,Button, Card, CardContent, Grid } from '@mui/material';
+import { Container,CardActions, Tooltip,Typography,Button, Card, CardContent, Grid } from '@mui/material';
 
 const ManageAllProduct = () => {
 
@@ -50,27 +50,28 @@ const ManageAllProduct = () => {
             services.map(service =>  <Grid key={service._id} item xs={4} sm={4} md={4} >
                 <Card sx={{  boxShadow: 2 }}>
       
-      <Box  sx={{ bgcolor: 'text.disabled',color: 'primary.main' }}>
+                <Box sx={{ color: 'primary.main' }}>
+      <Typography className="ratingCard">
       <CardContent>
-      <img style={{height:"250px"}} src={service.img} />
         <Typography gutterBottom variant="h5" component="div">
           {service.name}
         </Typography>
-        <Typography variant="h6" color="text.secondary"  sx={{ color: "white" , p:1 }}>
+        <Typography variant="h6" color="text.secondary" sx={{ color: "white" , p:1 }}>
           {service.price} BDT
         </Typography>
         <Typography variant="body2" color="text.secondary">
-           {service.description}
+          {service.description}
         </Typography>
-         
-        
-       <div sx={{ justifyContent: 'space-between' }}>
+      </CardContent>
+      <CardActions>
+      <div sx={{ justifyContent: 'space-between' }}>
        
         <Button variant="contained"  onClick={()=> handleDelete(service._id)}>Delete</Button>
        </div>
         
-      </CardContent>
-      
+        
+      </CardActions>
+      </Typography>
       </Box>
     </Card>
           </Grid>
