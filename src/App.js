@@ -28,6 +28,7 @@ import MyOrder from "./Pages/MyOrder/MyOrder";
 import NotFound from "./Pages/NotFound/NotFound";
 import { render } from "react-dom";
 import AdminRoute from "./Pages/Login/AdminRoute/AdminRoute";
+import ManageAllProduct from "./Pages/ManageAllProduct/ManageAllProduct";
 
 function App() {
   return (
@@ -73,6 +74,11 @@ function App() {
             <AdminRoute path="/manageAllOrder">
               <ManageAllOrder />
             </AdminRoute>
+
+            <AdminRoute path="/ManageAllProduct">
+              <ManageAllProduct></ManageAllProduct>
+            </AdminRoute>
+
             <PrivateRoute path="/review">
               <Review />
             </PrivateRoute>

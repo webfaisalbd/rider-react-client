@@ -22,6 +22,8 @@ import AddService from '../../AddService/AddService';
 import Review from '../Review/Review';
 import MyOrder from '../../MyOrder/MyOrder';
 import ManageAllOrder from '../../ManageAllOrder/ManageAllOrder';
+import Pay from '../Pay/Pay';
+import ManageAllProduct from '../../ManageAllProduct/ManageAllProduct';
 
 const drawerWidth = 200;
 
@@ -49,7 +51,9 @@ function Dashboard(props) {
                          <Link to={`${url}/review`}><Button color="inherit">Provide Review</Button></Link>
                          <Link to={`${url}/myOrder`}><Button color="inherit">My Order</Button></Link>
                          <Divider />
-                         <Link to="/pay" ><Button>Payment Gateway</Button></Link>
+                         <Link to={`${url}/pay`}><Button color="inherit">My pay</Button></Link>
+                         <Divider />
+                         
                          <Divider />
                          <Button onClick={logOut} color="inherit">LogOut</Button>
                 </Box>
@@ -66,6 +70,7 @@ function Dashboard(props) {
                  <Link to={`${url}/makeAdmin`}><Button color="inherit">Make Admin</Button></Link>
                  <Link to={`${url}/addService`}><Button color="inherit">Add a Product</Button></Link>
                  <Link to={`${url}/manageAllOrder`}><Button color="inherit">Manage All Order</Button></Link>
+                 <Link to={`${url}/ManageAllProduct`}><Button color="inherit">Manage Products</Button></Link>
                  <Divider />
                 <Button onClick={logOut} color="inherit">LogOut</Button>
                  
@@ -154,12 +159,18 @@ function Dashboard(props) {
                     <Route path={`${path}/review`}>
                         <Review></Review>
                     </Route>
+                    <Route path={`${path}/pay`}>
+                        <Pay></Pay>
+                    </Route>
                     
                     <Route path={`${path}/myOrder`}>
                         <MyOrder></MyOrder>
                     </Route>
                     <Route path={`${path}/manageAllOrder`}>
                         <ManageAllOrder></ManageAllOrder>
+                    </Route>
+                    <Route path={`${path}/ManageAllProduct`}>
+                        <ManageAllProduct></ManageAllProduct>
                     </Route>
 
                 </Switch>
