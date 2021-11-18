@@ -45,24 +45,25 @@ const Sliding = () => {
         
         <Slider {...settings}>
           <div>
-          <img style={{ width: "600px",   height: "400px"}} src="https://i.ibb.co/8Bwznt2/banner.jpg" />          </div>
-          <div>
-          <img style={{ width: "100%",   height: "400px"}} src="https://images.unsplash.com/photo-1449426468159-d96dbf08f19f?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8a3RtJTIwYmlrZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80" />
+          <img style={{ width: "600px",   height: "400px"}} src="https://i.ibb.co/52xcPWS/sliding2.jpg" />   
           </div>
           <div>
-          <img style={{ width: "100%",   height: "400px"}} src="https://img.etimg.com/thumb/msid-68423006,width-1200,height-900/magazines/panache/yamaha-motor-unveils-155-cc-bike-mt-15-at-rs-1-36-lakh.jpg" />
+          <img style={{ width: "100%",   height: "400px"}} src="https://i.ibb.co/KsS530S/sliding3.jpg" />
           </div>
           <div>
-          <img style={{ width: "100%",   height: "400px"}} src="https://cdn.suzukimotorcycle.co.in/public-live/uploads/media-images/original/Gixxer-SF-Mira-Red-150-Website-Home-Page-Desktop-2547x1420-new-min_5f759dfde64f8.jpg" />
+          <img style={{ width: "100%",   height: "400px"}} src="https://i.ibb.co/w78RWM8/sliding5.jpg" />
           </div>
           <div>
-          <img style={{ width: "100%",   height: "400px"}} src="https://www.wallpapertip.com/wmimgs/57-577323_full-hd-bike-background.jpg" />
+          <img style={{ width: "100%",   height: "400px"}} src="https://i.ibb.co/Rj57jg8/sliding6.jpg" />
           </div>
           <div>
-          <img style={{ width: "100%",   height: "400px"}} src="https://www.wallpapertip.com/wmimgs/57-577323_full-hd-bike-background.jpg" />
+          <img style={{ width: "100%",   height: "400px"}} src="https://i.ibb.co/KFPTfVD/sliding7.jpg" />
           </div>
           <div>
-          <img style={{ width: "100%",   height: "400px"}} src="https://images.pexels.com/photos/1413412/pexels-photo-1413412.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" />
+          <img style={{ width: "100%",   height: "400px"}} src="https://i.ibb.co/Jt1G68h/sliding13.png" />
+          </div>
+          <div>
+          <img style={{ width: "100%",   height: "400px"}} src="https://i.ibb.co/2sfTrVv/sliding12.jpg" />
           </div>
           
         </Slider>

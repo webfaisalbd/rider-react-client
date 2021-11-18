@@ -29,10 +29,10 @@ const ShowReviews = () => {
             We are always welcome to our customer feedback 
                     </Typography>
       <Container>
-      <Grid sx={{ flexGrow: 1 , mb: 3 , p:2 }} container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
+      <Grid sx={{ flexGrow: 1 , mb: 3 , p:2 }} container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12, lg:16}}>
         
         {
-            services.map(service =>  <Grid item xs={4} sm={4} md={3} >
+            services.map(service =>  <Grid item xs={4} sm={4} md={4} lg={4} >
                 <ShowReview key={service._id}
                         service={service}></ShowReview>
           </Grid>
