@@ -22,6 +22,7 @@ const Service = ({ service }) => {
         </Typography>
       </CardContent>
       <CardActions>
+        
       <Link to={`/booking/${_id}`}  style={{textDecoration:"none"}}>
              <Tooltip  title="Click" placement="top">
              <Button variant="contained"  size="small">Buy Now</Button>
