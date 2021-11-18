@@ -15,7 +15,7 @@ const ManageAllProduct = () => {
 
     const handleDelete= id => {
 
-        const proceed = window.confirm('Are you sure,You want to delete?')
+        const proceed = window.confirm('Are you Remove this bike? Confirm ?')
         if (proceed) {
             const url = `https://intense-woodland-83356.herokuapp.com/services/${id}`;
             fetch(url, {
@@ -24,7 +24,7 @@ const ManageAllProduct = () => {
                 .then(res => res.json())
                 .then(data => {
                     if (data.deletedCount > 0) {
-                        alert('deleted successfully')
+                        alert('Product Removed successfully')
                         const remainingUsers = services.filter(service => service._id !== id);
                         setServices(remainingUsers)
 
@@ -41,7 +41,7 @@ const ManageAllProduct = () => {
     return (
         <Box sx={{ flexGrow: 1 }}>
           <Typography sx variant="h4" component="div" sx={{ flexGrow: 1 , m: 3 }}>
-                        Manage All Product 
+                        Manage Products 
                     </Typography>
       <Container>
       <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
@@ -49,8 +49,8 @@ const ManageAllProduct = () => {
         {
             services.map(service =>  <Grid key={service._id} item xs={4} sm={4} md={4} >
                 <Card sx={{  boxShadow: 2 }}>
-      
-                <Box sx={{ color: 'primary.main' }}>
+                <img style={{height:"250px"}} src={service.img} />
+                <Box>
       <Typography className="ratingCard">
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
@@ -80,6 +80,7 @@ const ManageAllProduct = () => {
       
     </Grid>
       </Container>
+      
     </Box>
     );
 };

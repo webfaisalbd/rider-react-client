@@ -15,7 +15,7 @@ const Services = () => {
     return (
         <Box sx={{ flexGrow: 1 }}>
           <Typography sx variant="h4" component="div" sx={{ flexGrow: 1 , m: 3 }}>
-                        Our Featured Products 
+                        Our Latest Products 
                     </Typography>
       <Container>
       <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>

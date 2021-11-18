@@ -14,7 +14,7 @@ const ShowReview = ({ service }) => {
         <CardMedia
           component="img"
           height="140"
-          image="https://i.ibb.co/P5gzypq/review.png"
+          image ="https://i.ibb.co/P5gzypq/review.png"
           alt="green iguana"
         />
         <CardContent>

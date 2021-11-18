@@ -22,7 +22,7 @@ const ManageAllOrder = () => {
 
     const handleDelete= id => {
 
-        const proceed = window.confirm('Are you sure,You want to delete?')
+        const proceed = window.confirm('Are You want to cancel order? Confirm ?')
         if (proceed) {
             const url = `https://intense-woodland-83356.herokuapp.com/buyer/${id}`;
             fetch(url, {
@@ -31,7 +31,7 @@ const ManageAllOrder = () => {
                 .then(res => res.json())
                 .then(data => {
                     if (data.deletedCount > 0) {
-                        alert('deleted successfully')
+                        alert('Cancel the order successfully')
                         const remainingUsers = users.filter(user => user._id !== id);
                         setUsers(remainingUsers)
 
@@ -62,7 +62,7 @@ const ManageAllOrder = () => {
         .then((res) => res.json())
         .then((result) => {
             if (result.acknowledged) {
-                alert("Update Successfully");
+                alert("Update Order Successfully");
                 setApproved(!approved);
             }
         });
@@ -71,13 +71,16 @@ const ManageAllOrder = () => {
 
     return (
         <div id="users">
+            <Typography sx variant="h4" component="div" sx={{ flexGrow: 1 , m: 3 }}>
+            Manage Orders
+                    </Typography>
             
-            <h2  className="mt-2 text-info">Manage All Orders</h2>
+           
             <div className="row">
             
             <Table striped bordered hover>
                   <thead>
-                      <tr>
+                      <tr  style={{ backgroundColor: 'green' }}>
                           <th>Name</th>
                           <th>Address</th>
                           <th>Email</th>
@@ -89,13 +92,13 @@ const ManageAllOrder = () => {
                   <tbody>
                       {
                           users.map(user =>
-                              <tr>
+                              <tr style={{ backgroundColor: 'yellow' }}>
                                   <td>{user.name}</td>
                                   <td>{user.address}</td>
                                   <td>{user.email}</td>
                                   <td>{user.date}</td>
-                                  <td>{user.status}</td>
-                                  <td> <Button onClick={() => handleApproved(user)} className="btn btn-regular">✔️</Button> <Button onClick={() => handleDelete(user._id)} className="btn btn-regular">❌</Button> </td>
+                                  <td> <span  style={{ backgroundColor: 'white', padding:'5px', borderRadius:'5px' }}>{user.status}</span> </td>
+                                  <td> <Button onClick={() => handleApproved(user)} className="btn btn-regular"> <span style={{backgroundColor:"green",color:"black", padding:'5px 20px', borderRadius:'5px'}}>Add</span> </Button> <Button onClick={() => handleDelete(user._id)} className="btn btn-regular"><span style={{backgroundColor:"red",color:"black", padding:'5px 20px', borderRadius:'5px'}}>Delete</span></Button> </td>
                               </tr>
                           )
                       }

@@ -46,7 +46,9 @@ const MyOrder = () => {
     return (
         <div id="buyer">
             
-            <h2>My Orders</h2>
+            <Typography sx variant="h4" component="div" sx={{ flexGrow: 1 , m: 3 }}>
+            My Orders
+                    </Typography>
             <div className="row">
             <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
         
@@ -54,8 +56,9 @@ const MyOrder = () => {
             users.map(user =>  <Grid item xs={4} sm={4} md={4} >
                 <Card sx={{  boxShadow: 2 }}>
       
-      <Box  sx={{ bgcolor: 'text.disabled',color: 'primary.main' }}>
-      <CardContent>
+      <Box  sx={{ bgcolor: '',color: 'primary.main' }}>
+     <Typography className="ratingCard">
+     <CardContent>
         <Typography gutterBottom variant="h5" component="div">
           {user.name}
         </Typography>
@@ -81,6 +84,7 @@ const MyOrder = () => {
        </div>
         
       </CardContent>
+     </Typography>
       
       </Box>
     </Card>

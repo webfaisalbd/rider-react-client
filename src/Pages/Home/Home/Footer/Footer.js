@@ -3,7 +3,7 @@ import "./Footer.css"
 
 const Footer = () => {
     return (
-        <div>
+        <div style={{marginTop:"30px"}}>
             <footer class="footer">
   	 <div class="container">
   	 	<div class="row">
@@ -21,7 +21,6 @@ const Footer = () => {
   	 			<ul>
   	 				<li><a href="#">FAQ</a></li>
   	 				<li><a href="#">shipping</a></li>
-  	 				<li><a href="#">returns</a></li>
   	 				<li><a href="#">order status</a></li>
   	 				<li><a href="#">payment options</a></li>
   	 			</ul>
@@ -38,10 +37,10 @@ const Footer = () => {
   	 		<div class="footer-col">
   	 			<h4>follow us</h4>
   	 			<div class="social-links">
-  	 				<a href="#"><i class="fab fa-facebook-f"></i></a>
-  	 				<a href="#"><i class="fab fa-twitter"></i></a>
-  	 				<a href="#"><i class="fab fa-instagram"></i></a>
-  	 				<a href="#"><i class="fab fa-linkedin-in"></i></a>
+  	 				<a target='_blank' href="https://www.facebook.com/faisalDotMe/"><i class="fab fa-facebook-f"></i></a>
+  	 				<a target='_blank' href="https://github.com/webfaisalbd"><i class="fab fa-github"></i></a>
+  	 				<a target='_blank' href="#"><i class="fab fa-instagram"></i></a>
+  	 				<a target='_blank' target='_blank' href="https://www.linkedin.com/in/webfaisalbd/"><i class="fab fa-linkedin-in"></i></a>
   	 			</div>
   	 		</div>
   	 	</div>

@@ -8,7 +8,7 @@ const Service = ({ service }) => {
     return (
       <Card sx={{  boxShadow: 2 }}>
       <img style={{height:"250px"}} src={img} />
-      <Box sx={{ color: 'primary.main' }}>
+      <Box>
       <Typography className="ratingCard">
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
@@ -18,7 +18,7 @@ const Service = ({ service }) => {
           {price} BDT
         </Typography>
         <Typography variant="body2" color="text.secondary">
-          {description}
+          {description.slice(0,60)}.....
         </Typography>
       </CardContent>
       <CardActions>

@@ -1,3 +1,4 @@
+import { Typography } from '@mui/material';
 import axios from 'axios';
 import React from 'react';
 import { useForm } from "react-hook-form";
@@ -12,7 +13,7 @@ const AddService = () => {
         axios.post('https://intense-woodland-83356.herokuapp.com/services', data)
             .then(res => {
                 if (res.data.insertedId) {
-                    alert('added successfully');
+                    alert('Product added successfully');
                     reset();
                 }
             })
@@ -20,7 +21,9 @@ const AddService = () => {
 
     return (
         <div className="add-service">
-            <h2>Please Add a Service</h2>
+            <Typography sx variant="h4" component="div" sx={{ flexGrow: 1 , m: 3 }}>
+            Add Product
+                    </Typography>
             <form onSubmit={handleSubmit(onSubmit)}>
                 <input {...register("name", { required: true, maxLength: 20 })} placeholder="Name" />
                 <textarea {...register("description")} placeholder="Description" />
