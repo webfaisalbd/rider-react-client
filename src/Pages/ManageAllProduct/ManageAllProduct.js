@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import Box from '@mui/material/Box';
 import { Container,CardActions, Tooltip,Typography,Button, Card, CardContent, Grid } from '@mui/material';
+import Typed from 'react-typed';
+
 
 const ManageAllProduct = () => {
 
@@ -41,7 +43,13 @@ const ManageAllProduct = () => {
     return (
         <Box sx={{ flexGrow: 1 }}>
           <Typography sx variant="h4" component="div" sx={{ flexGrow: 1 , m: 3 }}>
-                        Manage Products 
+                        
+                           
+            <Typed
+strings={['Manage Products ']}
+typeSpeed={150}
+/>
+<br/>
                     </Typography>
       <Container>
       <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>

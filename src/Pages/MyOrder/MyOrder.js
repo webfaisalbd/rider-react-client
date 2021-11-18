@@ -2,6 +2,8 @@ import { Button, Card, CardContent, Grid, Typography } from '@mui/material';
 import { Box } from '@mui/system';
 import React, { useEffect, useState } from 'react';
 import useAuth from '../../hooks/useAuth';
+import Typed from 'react-typed';
+
 
 const MyOrder = () => {
 
@@ -47,7 +49,12 @@ const MyOrder = () => {
         <div id="buyer">
             
             <Typography sx variant="h4" component="div" sx={{ flexGrow: 1 , m: 3 }}>
-            My Orders
+            
+            <Typed
+strings={[' My Orders']}
+typeSpeed={150}
+/>
+<br/>
                     </Typography>
             <div className="row">
             <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>

@@ -11,12 +11,8 @@ const ShowReview = ({ service }) => {
     return (
       <Card  className="ratingCard"  sx={{ maxWidth: 345 }}>
       <CardActionArea>
-        <CardMedia
-          component="img"
-          height="140"
-          image ="https://i.ibb.co/P5gzypq/review.png"
-          alt="green iguana"
-        />
+        
+        <img style={{marginTop:"10px", borderRadius:'50%'}} width='25%' src="https://i.ibb.co/qdG3jRx/menIcon.png" alt="" />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
           {name}

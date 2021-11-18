@@ -4,6 +4,8 @@ import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import { Container, Typography } from '@mui/material';
 import Footer from '../Home/Home/Footer/Footer';
+import Typed from 'react-typed';
+
 
 const AllServices = () => {
     const [services, setServices] = useState([])
@@ -16,7 +18,12 @@ const AllServices = () => {
     return (
         <Box sx={{ flexGrow: 1 }}>
           <Typography sx variant="h4" component="div" sx={{ flexGrow: 1 , m: 3 }}>
-                        Our All Products 
+          <Typed
+                    strings={['Our All Products ']}
+                    typeSpeed={150}
+                />
+                <br/> 
+                        
                     </Typography>
       <Container>
       <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>

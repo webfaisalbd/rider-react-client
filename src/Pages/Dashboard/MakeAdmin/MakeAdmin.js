@@ -1,6 +1,8 @@
 import { Button, TextField, Alert, Typography } from '@mui/material';
 import React, { useState } from 'react';
 import useAuth from './../../../hooks/useAuth';
+import Typed from 'react-typed';
+
 
 const MakeAdmin = () => {
     const [email, setEmail] = useState('');
@@ -33,7 +35,12 @@ const MakeAdmin = () => {
     return (
         <div>
             <Typography sx variant="h4" component="div" sx={{ flexGrow: 1 , m: 3 }}>
-            Make Admin
+            
+            <Typed
+strings={['Make Admin']}
+typeSpeed={150}
+/>
+<br/>
                     </Typography>
             <p>Admin can make another admin</p>
             <form onSubmit={handleAdminSubmit}>

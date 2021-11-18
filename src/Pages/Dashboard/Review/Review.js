@@ -4,6 +4,8 @@ import React from 'react';
 import { useForm } from "react-hook-form";
 import useAuth from '../../../hooks/useAuth';
 import "./Review.css"
+import Typed from 'react-typed';
+
 
 
 const Review = () => {
@@ -25,7 +27,12 @@ const Review = () => {
     return (
         <div className="add-review">
             <Typography sx variant="h4" component="div" sx={{ flexGrow: 1 , m: 3 }}>
-            Give your feedback
+            
+            <Typed
+strings={[' Give your feedback']}
+typeSpeed={40}
+/>
+<br/>
                     </Typography>
                     <p style={{paddingBottom:'15px'}}>Your feedback is valuable for our development </p>
            

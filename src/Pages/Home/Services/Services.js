@@ -3,6 +3,7 @@ import Service from '../Service/Service';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import { Container, Typography } from '@mui/material';
+import Typed from 'react-typed';
 
 const Services = () => {
     const [services, setServices] = useState([])
@@ -12,10 +13,16 @@ const Services = () => {
             .then(data => setServices(data.slice(0, 6)));
     }, [])
 
+
     return (
         <Box sx={{ flexGrow: 1 }}>
           <Typography sx variant="h4" component="div" sx={{ flexGrow: 1 , m: 3 }}>
-                        Our Latest Products 
+                         
+                        <Typed
+                    strings={['Our Latest Products']}
+                    typeSpeed={150}
+                />
+                <br/>
                     </Typography>
       <Container>
       <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>

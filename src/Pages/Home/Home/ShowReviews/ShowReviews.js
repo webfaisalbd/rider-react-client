@@ -3,6 +3,8 @@ import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import { Container, Typography } from '@mui/material';
 import ShowReview from '../ShowReview/ShowReview';
+import Typed from 'react-typed';
+
 
 const ShowReviews = () => {
     const [services, setServices] = useState([])
@@ -13,10 +15,15 @@ const ShowReviews = () => {
     }, [])
 
     return (
-        <Box sx={{ flexGrow: 1, mt:5 }}>
+        <Box sx={{ flexGrow: 1, mt:10 }}>
             
                     <Typography sx variant="h4" component="div" sx={{ flexGrow: 1 , mb: 2 }}>
-            Customers Feedback 
+            
+            <Typed
+                    strings={['Customers Feedback']}
+                    typeSpeed={250}
+                />
+                <br/> 
                     </Typography>
                     <Typography sx variant="p" component="div" sx={{ flexGrow: 1 }}>
             We are always welcome to our customer feedback 
@@ -25,7 +32,7 @@ const ShowReviews = () => {
       <Grid sx={{ flexGrow: 1 , mb: 3 , p:2 }} container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
         
         {
-            services.map(service =>  <Grid item xs={4} sm={4} md={4} >
+            services.map(service =>  <Grid item xs={4} sm={4} md={3} >
                 <ShowReview key={service._id}
                         service={service}></ShowReview>
           </Grid>

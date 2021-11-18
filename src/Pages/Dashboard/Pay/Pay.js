@@ -1,14 +1,20 @@
 import { Container, Grid, Typography } from '@mui/material';
 import { Box } from '@mui/system';
 import React from 'react';
-
+import Typed from 'react-typed';
 const Pay = () => {
     return (
 <Container>
 <div>
      
      <Typography sx variant="h4" component="div" sx={{ flexGrow: 1 , m: 3 }}>
-     All Payments gateway is comming soon
+    
+     
+<Typed
+strings={[' All Payments gateway is comming soon']}
+typeSpeed={150}
+/>
+<br/> 
                     </Typography>
      <Box sx={{ width: '100%',pt:5 }}>
       <Grid container rowSpacing={5} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>

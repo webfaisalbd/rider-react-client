@@ -1,6 +1,8 @@
 import { Card, Grid, Box, CardContent, Typography, Button, Table } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 import useAuth from '../../hooks/useAuth';
+import Typed from 'react-typed';
+
 
 const ManageAllOrder = () => {
 
@@ -72,7 +74,12 @@ const ManageAllOrder = () => {
     return (
         <div id="users">
             <Typography sx variant="h4" component="div" sx={{ flexGrow: 1 , m: 3 }}>
-            Manage Orders
+            
+            <Typed
+strings={['Manage Orders']}
+typeSpeed={150}
+/>
+<br/>
                     </Typography>
             
            
