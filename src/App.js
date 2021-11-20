@@ -29,6 +29,7 @@ import NotFound from "./Pages/NotFound/NotFound";
 import { render } from "react-dom";
 import AdminRoute from "./Pages/Login/AdminRoute/AdminRoute";
 import ManageAllProduct from "./Pages/ManageAllProduct/ManageAllProduct";
+import Contact from "./Pages/Contact/Contact";
 
 function App() {
   return (
@@ -43,6 +44,9 @@ function App() {
             </Route>
             <Route path="/home">
               <Home />
+            </Route>
+            <Route path="/contact">
+              <Contact />
             </Route>
             <Route path="/sliding">
               <Sliding />
